@@ -21,7 +21,6 @@ const PORT = process.env.PORT || 3000;
 // ===========================================
 // SUPABASE INITIALIZATION
 // ===========================================
-// Input Missing Information: Add your Supabase URL and Service Key to .env file
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_KEY;
 
