@@ -373,7 +373,7 @@ app.use((err, req, res, next) => {
 });
 
 // ===========================================
-// START SERVER
+// START SERVER THIS NEEDS TO BE UPDATED FOR DEPLOYMENT
 // ===========================================
 
 app.listen(PORT, () => {
