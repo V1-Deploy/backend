@@ -37,8 +37,24 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);
 // ===========================================
 
 // CORS configuration
+const allowedOrigins = [
+    'http://localhost:3000',
+    'https://V1-Deploy.github.io',  // Update with your actual GitHub username
+    'http://127.0.0.1:5500'  // For local development
+];
+
 app.use(cors({
-    origin: process.env.FRONTEND_URL || '*',
+    origin: function (origin, callback) {
+        // Allow requests with no origin (mobile apps, Postman, etc.)
+        if (!origin) return callback(null, true);
+        
+        if (allowedOrigins.indexOf(origin) !== -1) {
+            callback(null, true);
+        } else {
+            console.log('Blocked by CORS:', origin);
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
     methods: ['GET', 'POST'],
     credentials: true
 }));
