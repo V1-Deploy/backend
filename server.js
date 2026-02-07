@@ -39,7 +39,7 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);
 // CORS configuration
 const allowedOrigins = [
     'http://localhost:3000',
-    'https://V1-Deploy.github.io',  // Update with your actual GitHub username
+    'https://v1-deploy.github.io/frontend/',  // Update with your actual GitHub username
     'http://127.0.0.1:5500'  // For local development
 ];
 
