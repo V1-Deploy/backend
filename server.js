@@ -38,7 +38,8 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);
 // CORS configuration
 const allowedOrigins = [
     'http://localhost:3000',
-    'https://www.topsidetracker.com/',  // Your actual GitHub Pages URL
+    'https://topsidetracker.com',        // No www, no trailing slash
+    'https://www.topsidetracker.com',    // With www, no trailing slash
     'http://127.0.0.1:5500'
 ];
 
